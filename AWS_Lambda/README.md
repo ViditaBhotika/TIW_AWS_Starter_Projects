@@ -66,7 +66,7 @@ Once you have written all of your code in the **lambda_function.py** file, and i
 # Hints / Troubleshooting
 
 1. What do you think the line `members = fabman.get_members(q='matt')` will do? How could you change the parameters to _query_ something else?
-2. To get the last name of a member, the line `member.__getattribute__("lastName")` might be helpful. Same goes for the first name and the email _attributes_.
+2. To get the last name of a member, the line `member.lastName` might be helpful. Same goes for the first name and the email _attributes_. To find a list of the attributes you can access (and the syntax for accessing them), look at the GET/members call on https://fabman.io/api/v1/documentation#/members/postMembers.
 3. While it is ok to call the Fabman API as many times as you wish, the more times you call the API, the longer and more expensive your code is. Can you solve the problem by using only one API call?
 4. If the previous hints did not help at all, take a look at the **/utils/** folder in **fabmansync** and see if you can pull some good information from those files.
 5. If you get a TIMEOUT error saying the function execution took too long in AWS Lambda, under the Configuration tab, increase the timeout time from 3 seconds to 5.
