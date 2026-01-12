@@ -32,15 +32,15 @@ Write code under the _TODO_ sections of the **lambda_function.py** code to print
 
 # Rundown of the Files in AWS_Lambda
 
-1. **packages/** : this is a folder of python code that we did not write! Python packages, or dependencies, helps us write code a lot easier without having to code absolutely EVERYTHING from scratch. You should not need to install any other packages to make this work, and if you want to learn more about Python packages and how to install them DM me!
-2. **lambda_function.py** : this is where you will write your python code for this task. The lambda_handler() in lambda_function.py is the entry point for where your lambda will begin execution. Inside the handler there are three TODO statements which you will need to complete in order to complete the task!
+1. **packages/** : this is a folder of python code that we did not write! Python packages (or dependencies) help us write code without having to code EVERYTHING from scratch. Basically, we try not to reinvent the wheel. You should not need to install any other packages to make this work, and if you want to learn more about Python packages and how to install them DM me!
+2. **lambda_function.py** : this is where you will write your python code for this task. The lambda_handler() in lambda_function.py is where your lambda will begin execution. Inside the handler there are three TODO statements which you will need to complete in order to complete the task!
 3. **README.md** : this file stores the text that you are reading right now! It's basically just a description/helpful guide to the code
 4. **requirements.txt** : this text file contains the names of the packages that help our code run. Take a look at the packages we need and try to piece together what they do in the context of our code.
 5. **secrets.py** : this code lets us retrieve key information stored in AWS Secrets Manager. Don't worry too much about this file, but if you are curious totally take a look inside!
 
 # Setup
 
-1. Make sure you have the AWS Command Line Interface (CLI) installed and set up with your TIW AWS Credentials
+1. Make sure you have the AWS Command Line Interface (CLI) installed and set up with your TIW AWS Credentials (you can do this on the main starter projects page)
 2. Clone the repo (if you haven't already)
 
 # Deployment Steps
