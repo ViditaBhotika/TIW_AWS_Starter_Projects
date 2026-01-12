@@ -46,24 +46,6 @@ class MemberCreditUse(FabmanObject):
         return f"{self.id}: {self.amount} - {self.description}"
 
 
-class MemberCredit(FabmanObject):
-    """
-    Simple Class to handle operations on MemberCredits
-    """
-
-    def __str__(self):
-        return f"{self.id}: {self.scope} - {self.amount}"
-
-    def delete(self, **kwargs) -> requests.Response:
-        """
-        Deletes a credit from a user account. **WARNING: THIS CANNOT BE UNDONE.**
-
-        :calls: "DELETE /members/{member_id}/credits/{credit_id}" \
-		<https://fabman.io/api/v1/documentation#/members/deleteMembersIdCreditsCreditid>
-
-        :returns: An empty dict if successful.
-        :rtype: dict
-        """
         response = self._requester.request(
             "DELETE", f"/members/{self.member_id}/credits/{self.id}", _kwargs=kwargs
         )
