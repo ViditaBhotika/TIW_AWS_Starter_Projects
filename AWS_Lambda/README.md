@@ -8,7 +8,7 @@
 
 AWS Lambda is like an always-on mini computer that can execute a programming function anytime you want! You can run it when a defined event happens, or even on a timer.
 
-TIW uses **AWS Lambda** to automatically sync the trainings between **Canvas**, the AWS Database (**AWS DynamoDB**), and **Fabman**. Another use case for an **AWS Lambda** to periodically poll who has activated a Fabman MAC, and see, in real time, who is checked into a machine.
+TIW uses **AWS Lambda** to automatically sync the trainings between **Canvas**, the AWS Database (**AWS DynamoDB**), and **Fabman**. Another use case for an **AWS Lambda** is to periodically poll who has activated a Fabman MAC, and see, in real time, who is checked into a machine. Currently, we are working on a system that will automatically verify that a student is certified to use our equipment!
 
 # The Exercise
 
