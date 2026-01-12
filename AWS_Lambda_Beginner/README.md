@@ -8,7 +8,7 @@
 
 AWS Lambda is like an always-on mini computer that can execute a programming function anytime you want! You can run it when a defined event happens, or even on a timer.
 
-TIW uses **AWS Lambda** to automatically sync the trainings between **Canvas**, the AWS Database (**AWS DynamoDB**), and **Fabman**. Another use case for an **AWS Lambda** to periodically poll who has activated a Fabman MAC, and see, in real time, who is checked into a machine.
+TIW uses **AWS Lambda** to automatically sync the trainings between **Canvas**, the AWS Database (**AWS DynamoDB**), and **Fabman**. Another use case for an **AWS Lambda** is to periodically poll who has activated a Fabman MAC, and see, in real time, who is checked into a machine. Currently, we are working on a system that will automatically verify that a student is certified to use our equipment!
 
 # The Exercise
 
@@ -32,15 +32,15 @@ Write code under the _TODO_ sections of the **lambda_function.py** code to print
 
 # Rundown of the Files in AWS_Lambda
 
-1. **packages/** : this is a folder of python code that we did not write! Python packages, or dependencies, helps us write code a lot easier without having to code absolutely EVERYTHING from scratch. You should not need to install any other packages to make this work, and if you want to learn more about Python packages and how to install them DM me!
-2. **lambda_function.py** : this is where you will write your python code for this task. The lambda_handler() in lambda_function.py is the entry point for where your lambda will begin execution. Inside the handler there are three TODO statements which you will need to complete in order to complete the task!
+1. **packages/** : this is a folder of python code that we did not write! Python packages (or dependencies) help us write code without having to code EVERYTHING from scratch. Basically, we try not to reinvent the wheel. You should not need to install any other packages to make this work, and if you want to learn more about Python packages and how to install them DM me!
+2. **lambda_function.py** : this is where you will write your python code for this task. The lambda_handler() in lambda_function.py is where your lambda will begin execution. Inside the handler there are three TODO statements which you will need to complete in order to complete the task!
 3. **README.md** : this file stores the text that you are reading right now! It's basically just a description/helpful guide to the code
 4. **requirements.txt** : this text file contains the names of the packages that help our code run. Take a look at the packages we need and try to piece together what they do in the context of our code.
 5. **secrets.py** : this code lets us retrieve key information stored in AWS Secrets Manager. Don't worry too much about this file, but if you are curious totally take a look inside!
 
 # Setup
 
-1. Make sure you have the AWS Command Line Interface (CLI) installed and set up with your TIW AWS Credentials
+1. Make sure you have the AWS Command Line Interface (CLI) installed and set up with your TIW AWS Credentials (you can do this on the main starter projects page)
 2. Clone the repo (if you haven't already)
 
 # Deployment Steps
@@ -66,7 +66,7 @@ Once you have written all of your code in the **lambda_function.py** file, and i
 # Hints / Troubleshooting
 
 1. What do you think the line `members = fabman.get_members(q='matt')` will do? How could you change the parameters to _query_ something else?
-2. To get the last name of a member, the line `member.__getattribute__("lastName")` might be helpful. Same goes for the first name and the email _attributes_.
+2. To get the last name of a member, the line `member.lastName` might be helpful. Same goes for the first name and the email _attributes_. To find a list of the attributes you can access (and the syntax for accessing them), look at the GET/members call on https://fabman.io/api/v1/documentation#/members/postMembers.
 3. While it is ok to call the Fabman API as many times as you wish, the more times you call the API, the longer and more expensive your code is. Can you solve the problem by using only one API call?
 4. If the previous hints did not help at all, take a look at the **/utils/** folder in **fabmansync** and see if you can pull some good information from those files.
 5. If you get a TIMEOUT error saying the function execution took too long in AWS Lambda, under the Configuration tab, increase the timeout time from 3 seconds to 5.
